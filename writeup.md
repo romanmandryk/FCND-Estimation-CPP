@@ -35,3 +35,16 @@ Step 3 was to tune `QPosXYStd` and the `QVelXYStd` parameters and results are sh
 Firstly I tuned `QYawStd` to value .02 to capture the drift.
 
 Then implemented `UpdateFromMag` method and normalized the error between measured and estimated yaw to be in -pi:pi range.
+Re-tuned `QYawStd` to value .1
+![10](./images/10.png)
+
+
+11_GPSUpdate
+--------
+I changed estimator params in 11_GPSUpdated and found the drone drifting away.
+I implemented UpdateFromGPS method and it passed the test by going in prescribed trajectory again as seen on image below .
+![11](./images/11.png)
+
+Then I added my custom controller and tuned params from the Project 3 and run the scenario again.
+The scenario has passed the test without the need to de-tune parameters.
+
